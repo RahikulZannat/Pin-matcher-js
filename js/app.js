@@ -40,12 +40,19 @@ document.getElementById('submit-compare').addEventListener('click', function(){
     const typedNumber = document.getElementById('typed-numbers');
     const typed = typedNumber.value;
 
-    // const notWorking = document.getElementById('not-working').style.display = 'none';
-    // const Working = document.getElementById('working').style.display = 'none';
 
     if(display == typed){
-        console.log('working');
         const working = document.getElementById('working');
-        const showing = working.innerText;
+        working.style.display = 'block';
+
+        const notWorking = document.getElementById('not-working');
+        notWorking.style.display = 'none';
+
+    }
+    else{
+        const notWorking = document.getElementById('not-working');
+        notWorking.style.display = 'block';
+        const working = document.getElementById('working');
+        working.style.display = 'none';
     }
 });
